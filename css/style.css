@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+}
+
+header {
+    display: flex;
+    background: #5796dd;
+    height: 120px;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff; 
+}
+
+header .socialmidia {
+    font-size: 30px;
+    padding: 10px;
+    margin: 5px;
+}
+
+header .socialmidia a i {
+    color: white;
+}
+
+header .socialmidia a i:hover {
+    color: rgb(11, 75, 128);
+    transition: 0.5s ease-in-out;
+}
+
+.main-game {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo {
+    font-size: 3.4rem;
+    font-weight: 900;
+    font-family: 'Press Start 2P', cursive;
+    padding: 30px;
+    background-image: linear-gradient(90deg, #5796dd, #00dfd8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:  transparent;
+    animation: colorCycle 1s ease-in-out infinite;
+}
+
+@keyframes colorCycle{
+    0%, 30% {
+       filter: brightness(0) invert(1);
+    }
+} 
+
+.genius {
+    display: grid;
+    grid-template-areas: 'amarelo azul' 'verde vermelho';
+    grid-gap: 10px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 5px solid black;
+    height: 500px;
+    width: 500px;
+}
+
+/*ADICINANDO CORES AO CIRCULO GENIUS */
+.amarelo {
+    grid-area: amarelo;
+    background-color: yellow;
+    border-top-left-radius: 100%;
+}
+
+.azul {
+    grid-area: azul;
+    background-color: blue;
+    border-top-right-radius: 100%;
+}
+
+.verde {
+    grid-area: verde;
+    background-color: green;
+    border-bottom-left-radius: 100%;
+}
+
+.vermelho {
+    grid-area: vermelho;
+    background-color: red;
+    border-bottom-right-radius: 100%;
+}
+
+/*EFEITO PISCAR PARA COR SELECIONADA*/
+ .selected {
+   opacity: 0.9;
+   animation: anima 300ms ease-in-out;
+}
+
+@keyframes anima {
+    to {
+        opacity: 0;
+    }
+}
+
